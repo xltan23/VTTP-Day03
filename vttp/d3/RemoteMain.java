@@ -1,7 +1,5 @@
 package vttp.d3;
 
-import java.rmi.Remote;
-
 public class RemoteMain {
     public static void main(String[] args) {
         Honda h = new Honda();

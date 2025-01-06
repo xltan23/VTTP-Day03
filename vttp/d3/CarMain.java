@@ -10,6 +10,7 @@ public class CarMain {
         System.out.printf("The new car colour is %s\n", myCar.getColour());
         myCar.setEngineCapacity(2500);
         System.out.printf("The engine capacity is %d\n", myCar.getEngineCapacity());
+    
 
         Car myFamilyCar = new Car("black","BMW");
         System.out.printf("My family car is a %s %s\n", myFamilyCar.getColour(), myFamilyCar.getMake());
@@ -17,11 +18,14 @@ public class CarMain {
         myFamilyCar.setEngineCapacity(700);
         System.out.printf("My family car is started: %d\n", myFamilyCar.getEngineCapacity()); 
 
-        Car civic = new Honda();
+        Honda civic = new Honda();
         System.out.printf("My new car colour is %s\n", civic.getColour());
         System.out.printf("My new car brand is %s\n", civic.getMake());
         System.out.printf("My new car engine capacity is %d\n", civic.getEngineCapacity());
-        civic.stop();
+        civic.start();
+        civic.accelerate();
+        Integer count = 5;
+        civic.stop(count);
     }
     
 }
