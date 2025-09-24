@@ -24,15 +24,14 @@ public class Car implements Controllable {
         this.make = make;
     }
 
-    // Getters and setters 
     public Car(String name) {
         this.name = name;
     }
 
+    // Getters and setters 
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -40,7 +39,6 @@ public class Car implements Controllable {
     public String getColour() {
         return colour;
     }
-
     public void setColour(String colour) {
         this.colour = colour;
     }
@@ -48,7 +46,6 @@ public class Car implements Controllable {
     public Integer getEngineCapacity() {
         return engineCapacity;
     }
-
     public void setEngineCapacity(Integer engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
@@ -56,7 +53,6 @@ public class Car implements Controllable {
     public String getMake() {
         return make;
     }
-
     public void setMake(String make) {
         this.make = make;
     }
@@ -64,7 +60,6 @@ public class Car implements Controllable {
     public Boolean getStarted() {
         return started;
     }
-
     public void setStarted(Boolean started) {
         this.started = started;
     }

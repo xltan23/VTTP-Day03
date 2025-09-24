@@ -1,6 +1,7 @@
 package vttp.d3;
 
 import java.util.List;
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.UUID;
 
@@ -23,10 +24,10 @@ public class BankAccount {
         this.accBalance = iniBalance;
     }
 
+    //Getters & Setters
     public String getAccName() {
         return accName;
     }
-
     public void setAccName(String accName) {
         this.accName = accName;
     }
@@ -34,7 +35,6 @@ public class BankAccount {
     public String getAccNumber() {
         return accNumber;
     }
-
     public void setAccNumber(String accNumber) {
         this.accNumber = accNumber;
     }
@@ -42,7 +42,6 @@ public class BankAccount {
     public Float getAccBalance() {
         return accBalance;
     }
-
     public void setAccBalance(Float accBalance) {
         this.accBalance = accBalance;
     }
@@ -50,7 +49,6 @@ public class BankAccount {
     public List<String> getTransactions() {
         return transactions;
     }
-
     public void setTransactions(List<String> transactions) {
         this.transactions = transactions;
     }
@@ -58,7 +56,6 @@ public class BankAccount {
     public String getCreationDate() {
         return creationDate;
     }
-
     public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
@@ -66,7 +63,6 @@ public class BankAccount {
     public String getClosingDate() {
         return closingDate;
     }
-
     public void setClosingDate(String closingDate) {
         this.closingDate = closingDate;
     }
@@ -75,7 +71,7 @@ public class BankAccount {
     public void deposit(Float add) {
         if (add >= 0) {
             this.accBalance = accBalance + add;
-            System.out.printf("deposit $%.2f at <date time>\n", add); 
+            System.out.printf("deposit $%.2f at %tD\n", add, LocalDateTime.now()); 
         } else {
             System.out.printf("Illegal Argument Exception\n");
         }
@@ -86,7 +82,7 @@ public class BankAccount {
         if (deduct <= this.accBalance) {
             if (deduct >= 0) {
                 this.accBalance = accBalance - deduct;
-                System.out.printf("withdraw $%.2f at <date time>\n", deduct);
+                System.out.printf("withdraw $%.2f at %tD\n", deduct, LocalDateTime.now());
             } else {
                 System.out.printf("Illegal Argument Exception\n");
             }

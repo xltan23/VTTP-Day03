@@ -12,5 +12,6 @@ public class RemoteMain {
 
         rm.start();
         rmNotebook.start();
+        System.out.println(h.getStarted());
     }    
 }

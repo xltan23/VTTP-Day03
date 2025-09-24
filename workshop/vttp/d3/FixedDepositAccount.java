@@ -5,6 +5,7 @@ public class FixedDepositAccount extends BankAccount {
     private Integer duration;
     //private float iniBalance;
 
+    //Constructors
     public FixedDepositAccount(String accName, Float iniBalance) {
         super(accName, iniBalance);
     }
@@ -20,10 +21,10 @@ public class FixedDepositAccount extends BankAccount {
         this.duration = duration;
     }
 
+    //Getters and Setters
     public Float getInterest() {
         return interest;
     }
-
     public void setInterest(Float interest) {
         this.interest = interest;
     }
@@ -31,7 +32,6 @@ public class FixedDepositAccount extends BankAccount {
     public Integer getDuration() {
         return duration;
     }
-
     public void setDuration(Integer duration) {
         this.duration = duration;
     }
